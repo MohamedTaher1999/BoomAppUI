@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#D9000000"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="-15dp"
+        app:cardCornerRadius="24dp"
+        app:layout_constraintStart_toStartOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearBtn2"
+                style="@style/groupStyleindigo_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="18dp"
+                android:gravity="start"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearBtn">
+
+                <ImageView
+                    android:id="@+id/imagePlus2"
+                    android:layout_width="@dimen/_24pxh"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_marginBottom="@dimen/_19pxv"
+                    android:layout_marginStart="@dimen/_40pxh"
+                    android:layout_marginTop="@dimen/_19pxv"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_plus_white_a700"
+                    tools:ignore="ContentDescription"
+                    tools:src="@drawable/img_plus_white_a700" />
+
+                <TextView
+                    android:id="@+id/txtBuy2"
+                    style="@style/txtIntersemibold161"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_21pxv"
+                    android:layout_marginStart="@dimen/_117pxh"
+                    android:layout_marginTop="@dimen/_20pxv"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/lbl_buy"
+                    android:textAllCaps="true" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineVectorSixtyEight"
+                android:layout_width="@dimen/_71pxh"
+                android:layout_height="@dimen/_1pxv"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="19dp"
+                android:background="@color/indigo_900"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearBtn"
+                style="@style/groupStyleindigo_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="33dp"
+                android:gravity="start"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lineVectorSixtyEight">
+
+                <ImageView
+                    android:id="@+id/imagePlus"
+                    android:layout_width="@dimen/_24pxh"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_marginBottom="@dimen/_19pxv"
+                    android:layout_marginStart="@dimen/_40pxh"
+                    android:layout_marginTop="@dimen/_19pxv"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_plus_white_a700"
+                    tools:ignore="ContentDescription"
+                    tools:src="@drawable/img_plus_white_a700" />
+
+                <TextView
+                    android:id="@+id/txtBuy"
+                    style="@style/txtIntersemibold161"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_21pxv"
+                    android:layout_marginStart="@dimen/_117pxh"
+                    android:layout_marginTop="@dimen/_20pxv"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:text="@string/lbl_buy" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearBtn3"
+                style="@style/groupStylecornerRadius_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearBtn2">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="140dp"
+                    android:layout_marginVertical="15dp"
+                    android:src="@drawable/sell_icon"/>
+
+                <TextView
+                    android:id="@+id/txtBuyTwo"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.08"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginVertical="18dp"
+                    android:singleLine="true"
+                    style="@style/txtIntersemibold16_1" android:text="@string/lbl_sell"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearBtn4"
+                style="@style/groupStylecornerRadius_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearBtn3">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="140dp"
+                    android:layout_marginVertical="15dp"
+                    android:src="@drawable/transfer_icon" />
+
+                <TextView
+                    android:id="@+id/txtBuy4"
+                    style="@style/txtIntersemibold16_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="18dp"
+                    android:letterSpacing="0.08"
+                    android:layout_marginStart="14dp"
+                    android:singleLine="true"
+                    android:text="@string/lbl_transfer" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearBtn5"
+                style="@style/groupStylecornerRadius_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearBtn4">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="140dp"
+                    android:layout_marginVertical="15dp"
+                    android:src="@drawable/get_loan_icon" />
+
+                <TextView
+                    android:id="@+id/txtBuy5"
+                    style="@style/txtIntersemibold16_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="18dp"
+                    android:letterSpacing="0.08"
+                    android:layout_marginStart="14dp"
+                    android:singleLine="true"
+                    android:text="@string/lbl_get_loan" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btnClose"
+                android:layout_width="@dimen/_49pxh"
+                android:layout_height="@dimen/_49pxh"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="45dp"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/rectangle_bg_black_901_radius_24_785"
+                android:paddingHorizontal="@dimen/_19pxh"
+                android:paddingVertical="@dimen/_19pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_close"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearBtn5"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

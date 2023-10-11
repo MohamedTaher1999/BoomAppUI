@@ -8,8 +8,9 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
-    lateinit var bottomNav : BottomNavigationView
-
+    companion object {
+        lateinit var bottomNav : BottomNavigationView
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -27,7 +28,10 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navigation_plus -> {
-                    loadFragment(HomeFragment())
+                    val transaction = supportFragmentManager.beginTransaction()
+                    transaction.add(R.id.container,plusFragment())
+                    transaction.commit()
+                    bottomNav.visibility=View.GONE
                     true
                 }
 
@@ -39,6 +43,12 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+    override fun onResume() {
+        super.onResume()
+        bottomNav.visibility=View.VISIBLE
+    }
+
     private  fun loadFragment(fragment: Fragment){
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.container,fragment)

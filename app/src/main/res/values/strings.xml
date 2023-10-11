@@ -6,6 +6,7 @@
     <string name="lbl_buy">Buy</string>
     <string name="lbl_get_loan">Get Loan</string>
     <string name="lbl_market_is_open">Market is open</string>
+    <string name="lbl_market_is_close">Market is Closed</string>
     <string name="lbl_home">Home</string>
     <string name="lbl_about">About</string>
     <string name="lbl_100">100 </string>
