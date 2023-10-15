@@ -34,7 +34,10 @@ class MainActivity : AppCompatActivity() {
                     bottomNav.visibility=View.GONE
                     true
                 }
-
+                R.id.navigation_feed -> {
+//                    loadFragment(TestChartFragment())
+                    true
+                }
                 else -> {
                     true
                 }

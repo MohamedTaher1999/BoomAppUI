@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 
-class ExploreFragment : Fragment() {
+class ExploreFragment : Fragment(),RecyclerViewClickListener  {
 
     var grid=false;
     override fun onCreateView(
@@ -46,7 +46,7 @@ class ExploreFragment : Fragment() {
                 gridImage.setImageDrawable(requireContext().getResources().getDrawable(R.drawable.unselected_grid))
                 horizntalImage.setImageDrawable(requireContext().getResources().getDrawable(R.drawable.selected_linear))
                 rec.layoutManager = LinearLayoutManager(requireContext())
-                val adapter = ExportHorizntalAdapter(data,requireContext())
+                val adapter = ExportHorizntalAdapter(data,requireContext(),this)
                 rec.adapter = adapter
             }
             grid=false
@@ -57,7 +57,7 @@ class ExploreFragment : Fragment() {
                 gridImage.setImageDrawable(requireContext().getResources().getDrawable(R.drawable.selected_grid))
                 horizntalImage.setImageDrawable(requireContext().getResources().getDrawable(R.drawable.unselected_linear))
                 rec.layoutManager=GridLayoutManager(requireContext(),2)
-                val adapter = ExportVerticalAdapter(data,requireContext())
+                val adapter = ExportVerticalAdapter(data,requireContext(),this)
                 rec.adapter = adapter
             }
             grid=true
@@ -67,10 +67,23 @@ class ExploreFragment : Fragment() {
 
         rec.layoutManager = LinearLayoutManager(requireContext())
 
-        val adapter = ExportHorizntalAdapter(data,requireContext())
+        val adapter = ExportHorizntalAdapter(data,requireContext(),this)
         rec.adapter = adapter
 
 
         return view
+    }
+
+    override fun onResume() {
+        super.onResume()
+        MainActivity.bottomNav.visibility=View.VISIBLE
+    }
+
+    override fun onItemClick() {
+        val transaction =requireActivity().supportFragmentManager.beginTransaction()
+        transaction.add(R.id.container,StockFragment())
+        transaction.commit()
+        MainActivity.bottomNav.visibility=View.GONE
+
     }
 }

@@ -10,10 +10,13 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ExportVerticalAdapter(private val mList: List<String>, val context: Context) : RecyclerView.Adapter<ExportVerticalAdapter.ViewHolder>() {
+class ExportVerticalAdapter(private val mList: List<String>, val context: Context,private val clickListener: RecyclerViewClickListener) : RecyclerView.Adapter<ExportVerticalAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         var currentItem=mList.get(position)
+        holder.itemView.setOnClickListener {
+            clickListener.onItemClick()
+        }
         if(currentItem.contains("red")){
             holder.text1.setTextColor(Color.parseColor("#DB334D"))
             holder.image.setImageDrawable(context.getResources().getDrawable(R.drawable.red_arr_e))
