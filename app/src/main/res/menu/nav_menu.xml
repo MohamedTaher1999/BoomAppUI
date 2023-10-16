@@ -2,17 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/img_home"
+        android:icon="@drawable/home_icon"
         android:title="Home" />
 
     <item
         android:id="@+id/navigation_explore"
-        android:icon="@drawable/img_search"
+        android:icon="@drawable/search_icon"
         android:title="Explore" />
 
     <item
         android:id="@+id/navigation_plus"
         android:icon="@drawable/plus_icon"
+        android:title=""
         />
 
     <item

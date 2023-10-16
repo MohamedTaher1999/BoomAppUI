@@ -72,7 +72,7 @@ class StockFragment : Fragment() {
             lineChart.right,
             lineChart.bottom
         )
-        val dataSet = LineDataSet(dataPoints, "My Data")
+        val dataSet = LineDataSet(dataPoints, "My Orders")
         dataSet.color = Color.parseColor("#ff810a")
         dataSet.lineWidth = 2f
         dataSet.setCircleColor(Color.parseColor("#ff810a"))
