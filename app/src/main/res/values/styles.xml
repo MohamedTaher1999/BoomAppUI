@@ -145,6 +145,12 @@
         <item name="android:fontFamily">@font/inter</item>
         <item name="android:textFontWeight" tools:targetApi="p">600</item>
     </style>
+    <style name="txtIntersemibold16121">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/indigo_900</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
     <style name="groupStyleindigo_1">
         <item name="android:background">@drawable/rectangle_bg_indigo_900_radius_31</item>
     </style>
@@ -472,6 +478,12 @@
     </style>
     <style name="txtIntersemibold161">
         <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white_A700</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtIntersemibold1601">
+        <item name="android:textSize">24sp</item>
         <item name="android:textColor">@color/white_A700</item>
         <item name="android:fontFamily">@font/inter</item>
         <item name="android:textFontWeight" tools:targetApi="p">600</item>

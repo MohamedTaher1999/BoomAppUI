@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -20,7 +21,8 @@ class ExploreFragment : Fragment(),RecyclerViewClickListener  {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+        requireActivity().window.statusBarColor = ContextCompat.getColor(requireContext(), R.color.white)
+
         var view= inflater.inflate(R.layout.fragment_explore, container, false)
 
 

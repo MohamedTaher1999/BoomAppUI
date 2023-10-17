@@ -44,33 +44,34 @@
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
             </androidx.appcompat.widget.LinearLayoutCompat>
+
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_marginHorizontal="16dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
                 android:src="@drawable/black_img_notification"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat" />
+                app:layout_constraintTop_toTopOf="@+id/linearLayoutCompat" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="53dp"
-                android:layout_marginTop="5dp"
                 android:src="@drawable/youtube_icon"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat" />
+                app:layout_constraintTop_toTopOf="@+id/linearLayoutCompat" />
+
             <LinearLayout
                 android:id="@+id/linearRowgroup349"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.66"
                 android:layout_marginHorizontal="16dp"
+                android:layout_weight="0.66"
 
                 android:orientation="horizontal"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat">
+                app:layout_constraintTop_toTopOf="@+id/linearLayoutCompat">
 
                 <FrameLayout
                     android:id="@+id/frameAvatar"
@@ -129,6 +130,7 @@
 
 
 
+
                 <TextView
                     android:id="@+id/txtAccCounter"
                     style="@style/txtIntermedium12_1"
@@ -140,8 +142,8 @@
                     android:layout_weight="0.42"
                     android:ellipsize="end"
                     android:singleLine="true"
-                    android:textAllCaps="true"
-                    android:text="@string/lbl_acc_01" />
+                    android:text="@string/lbl_acc_01"
+                    android:textAllCaps="true" />
                 <ImageView
                     android:id="@+id/imageArrowright"
                     android:layout_width="@dimen/_8pxh"
@@ -173,7 +175,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#C4C5E4"
+                    android:background="#EFEFFF"
                     >
 
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -259,7 +261,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#C4C5E4"
+                    android:background="#EFEFFF"
                     >
 
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -353,7 +355,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#C4C5E4"
+                    android:background="#EFEFFF"
                     >
 
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -439,7 +441,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#C4C5E4"
+                    android:background="#EFEFFF"
                     >
 
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -593,7 +595,7 @@
                             android:id="@+id/linearToggle"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="#C4C5E4"
+                            android:background="#EFEFFF"
                             android:paddingHorizontal="10dp"
                             android:orientation="horizontal"
                             >
@@ -735,6 +737,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="12dp"
+                    android:layout_marginBottom="20dp"
                     android:id="@+id/export_rec"
                     />
             </androidx.appcompat.widget.LinearLayoutCompat>

@@ -11,6 +11,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.widget.LinearLayoutCompat
+import androidx.core.content.ContextCompat
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
@@ -23,6 +24,7 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        requireActivity().window.statusBarColor = ContextCompat.getColor(requireContext(), R.color.indigo_900)
         var view= inflater.inflate(R.layout.fragment_home, container, false)
 
         var myOrdersTextView=view.findViewById<TextView>(R.id.btnMyOrders)
@@ -32,7 +34,7 @@ class HomeFragment : Fragment() {
         var txtOneHundredTwentyFive=view.findViewById<TextView>(R.id.txtOneHundredTwentyFive)
         var imageArrowdown=view.findViewById<ImageView>(R.id.imageArrowdown)
         var marketText=view.findViewById<TextView>(R.id.marketText)
-
+        var notificationImage=view.findViewById<ImageView>(R.id.imageView)
         loadFragment(MyOrdersFragment())
         myOrdersTextView.setOnClickListener(View.OnClickListener {
             if(!isMyOrdersSelected){
@@ -44,6 +46,7 @@ class HomeFragment : Fragment() {
                 txtOneHundredTwentyFive.setTextColor(Color.parseColor("#1ABB5B"))
                 imageArrowdown.setImageDrawable(requireContext().getResources().getDrawable(R.drawable.img_arrowdown))
                 marketText.setText(resources.getString(R.string.lbl_market_is_open))
+                notificationImage.setImageDrawable(requireContext().getResources().getDrawable(R.drawable.img_notification))
 
             }
             isMyOrdersSelected=true
@@ -58,6 +61,7 @@ class HomeFragment : Fragment() {
                 txtOneHundredTwentyFive.setTextColor(Color.parseColor("#F01313"))
                 imageArrowdown.setImageDrawable(requireContext().getResources().getDrawable(R.drawable.red_arr_e))
                 marketText.setText(resources.getString(R.string.lbl_market_is_close))
+                notificationImage.setImageDrawable(requireContext().getResources().getDrawable(R.drawable.disable_notification))
 
             }
             isMyOrdersSelected=false

@@ -23,7 +23,7 @@ class ExportHorizntalAdapter(private val mList: List<String>, val context: Conte
 
         }
         if(currentItem.contains("fav")){
-            holder.text2.setImageDrawable(context.getResources().getDrawable(R.drawable.fav_done))
+            holder.text2.setImageDrawable(context.getResources().getDrawable(R.drawable.fav_img))
         }
 
         if(currentItem.contains("fawery")){

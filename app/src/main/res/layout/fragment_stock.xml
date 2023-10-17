@@ -8,7 +8,7 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -421,7 +421,7 @@
                 android:layout_marginEnd="20.5dp"
                 android:layout_marginStart="20.5dp"
                 android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:orientation="horizontal"
                 style="@style/groupStyleindigo_100cornerRadius">
                 <TextView
@@ -438,7 +438,7 @@
                     android:singleLine="true"
                     android:text="@string/lbl_open_orders"
                     android:textAllCaps="false"
-                    android:textSize="16sp"
+                    android:textSize="14sp"
                     android:textColor="@color/indigo_900"
                     android:fontFamily="@font/inter"
                     android:textFontWeight="500"
@@ -458,7 +458,7 @@
                     android:singleLine="true"
                     android:text="@string/lbl_previous_orders"
                     android:textAllCaps="false"
-                    android:textSize="16sp"
+                    android:textSize="14sp"
                     android:textColor="@color/indigo_900"
                     android:fontFamily="@font/inter"
                     android:textFontWeight="500"
@@ -475,6 +475,112 @@
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
+
+
     </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <ImageButton
+            android:id="@+id/btnFavorite"
+            android:layout_width="@dimen/_42pxh"
+            android:layout_height="@dimen/_42pxh"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/white"
+            android:scaleType="fitCenter"
+            android:src="@drawable/unfav_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linearBtn2"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:id="@+id/linearBtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="62dp"
+            android:layout_marginBottom="22dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rectangle_border_indigo_900_radius_31"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:paddingHorizontal="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linearBtn"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imagePlus2"
+                android:layout_width="@dimen/_24pxh"
+                android:layout_height="@dimen/_24pxh"
+                android:layout_marginBottom="@dimen/_19pxv"
+                android:layout_marginTop="@dimen/_19pxv"
+                android:scaleType="fitXY"
+                android:src="@drawable/mins_icon"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/mins_icon" />
+
+            <TextView
+                android:id="@+id/txtBuy2"
+                style="@style/txtIntersemibold16121"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/lbl_sell"
+                android:textAllCaps="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearBtn"
+            style="@style/groupStyleindigo_1"
+            android:layout_width="wrap_content"
+            android:layout_height="62dp"
+            android:layout_marginBottom="22dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="16dp"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:paddingHorizontal="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imagePlus"
+                android:layout_width="@dimen/_24pxh"
+                android:layout_height="@dimen/_24pxh"
+                android:layout_marginBottom="@dimen/_19pxv"
+                android:layout_marginTop="@dimen/_19pxv"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_plus_white_a700"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/img_plus_white_a700" />
+
+            <TextView
+                android:id="@+id/txtBuy"
+                style="@style/txtIntersemibold161"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/lbl_buy"
+                android:textAllCaps="true" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

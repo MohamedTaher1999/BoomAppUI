@@ -70,9 +70,9 @@
                         android:layout_height="@dimen/_16pxh"
                         android:layout_gravity="start"
                         android:scaleType="fitXY"
-                        android:src="@drawable/img_cart"
+                        android:src="@drawable/trash"
                         tools:ignore="ContentDescription"
-                        tools:src="@drawable/img_cart" />
+                        tools:src="@drawable/trash" />
                 </FrameLayout>
             </LinearLayout>
         </LinearLayout>
